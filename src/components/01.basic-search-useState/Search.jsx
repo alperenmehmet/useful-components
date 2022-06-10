@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { data } from './data';
+import './search.css';
 
-export default function App() {
+export default function Search() {
   const [people, setPeople] = useState(data);
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -18,7 +19,7 @@ export default function App() {
   console.log(searchTerm);
 
   return (
-    <div className='App'>
+    <div className='container'>
       <h1>React Search Example</h1>
       <input type='text' onSubmit={handleSubmit} onChange={handleChange} />
       {people
