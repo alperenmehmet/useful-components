@@ -1,22 +1,22 @@
-import { useState } from 'react';
-import { data } from './data';
-import './search.css';
+import {useState} from 'react'
+import {data} from './data'
+import './search.css'
 
 export default function Search() {
-  const [people, setPeople] = useState(data);
-  const [searchTerm, setSearchTerm] = useState('');
+  const [people, setPeople] = useState(data)
+  const [searchTerm, setSearchTerm] = useState('')
 
-  console.log(people);
+  console.log(people)
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-  };
+    e.preventDefault()
+  }
 
   const handleChange = (e) => {
-    setSearchTerm(e.target.value);
-  };
+    setSearchTerm(e.target.value)
+  }
 
-  console.log(searchTerm);
+  console.log(searchTerm)
 
   return (
     <div className='container'>
@@ -25,16 +25,16 @@ export default function Search() {
       {people
         .filter((person) => {
           if (searchTerm === '') {
-            return person;
+            return person
           } else if (
             person.first_name.toLowerCase().includes(searchTerm.toLowerCase())
           ) {
-            return person;
+            return person
           }
         })
         .map((person, index) => {
-          return <div key={index}>{person.first_name}</div>;
+          return <div key={index}>{person.first_name}</div>
         })}
     </div>
-  );
+  )
 }
