@@ -1,4 +1,4 @@
-// i don't want to use all data, so i destructured it. Now my data is returning {id, title}
+// i don't want to use all the data, so i destructured it. Now my data is returning {id, title}
 
 export const selectedField = (data) => {
   const newData = data.map((item) => {
