@@ -11,3 +11,69 @@ body {
   sans-serif;
   background: white;
 }
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid black;
+  height: 4rem;
+  width: 4rem;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.circle-completed{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid green;
+  height: 4rem;
+  width: 4rem;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.line{
+  border: 1px solid black;
+  height: 1px;
+  width: 10rem;
+}
+
+.line-completed{
+  border: 1px solid green;
+  height: 1px;
+  width: 10rem;
+  /*animation: line-animation 3s forwards;*/
+  transition: 0.4s linear;
+}
+
+.button-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  gap: 2rem;
+}
+
+@keyframes line-animation {
+  0%{
+    width: 2rem;
+  }
+  25%{
+    width: 4rem;
+  }
+  50%{
+    width: 8rem;
+  }
+  75%{
+    width: 10rem;
+  }
+}

@@ -21,8 +21,6 @@ const Dropdown = () => {
     }
   }
 
-  console.log(showUser, selectedUser)
-
   return (
     <div>
       <label>select user: </label>
